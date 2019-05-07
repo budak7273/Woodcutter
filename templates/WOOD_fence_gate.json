@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:WOOD_planks",
+	"count": 4
+  },
+  "result": "minecraft:WOOD_fence_gate",
+  "count": 1
+}
