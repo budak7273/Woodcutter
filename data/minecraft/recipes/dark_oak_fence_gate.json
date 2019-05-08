@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:dark_oak_planks",
-	"count": 4
-  },
-  "result": "minecraft:dark_oak_fence_gate",
-  "count": 1
-}

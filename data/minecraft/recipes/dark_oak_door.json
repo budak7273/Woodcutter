@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:dark_oak_planks",
-	"count": 2
-  },
-  "result": "minecraft:dark_oak_door",
-  "count": 1
-}
