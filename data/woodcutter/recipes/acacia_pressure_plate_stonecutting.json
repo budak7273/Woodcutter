@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "minecraft:acacia_planks"
   },
-  "result": "minecraft:acacia_fence",
+  "result": "minecraft:acacia_pressure_plate",
   "count": 1
 }

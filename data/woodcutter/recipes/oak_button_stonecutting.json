@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "minecraft:oak_planks"
   },
-  "result": "minecraft:oak_fence_gate",
+  "result": "minecraft:oak_button",
   "count": 1
 }
