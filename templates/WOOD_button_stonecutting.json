@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "minecraft:WOOD_planks"
   },
-  "result": "minecraft:WOOD_trapdoor",
-  "count": 2
+  "result": "minecraft:WOOD_button",
+  "count": 1
 }
