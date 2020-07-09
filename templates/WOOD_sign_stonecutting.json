@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:WOOD_planks"
+  },
+  "result": "minecraft:WOOD_sign",
+  "count": 1
+}
