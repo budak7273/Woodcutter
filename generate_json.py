@@ -4,7 +4,7 @@ WORD_TO_REPLACE = "WOOD"
 TEMPLATES_DIR_RELATIVE = "\\templates"
 OUTPUT_DIR_RELATIVE = "\\data\\woodcutter\\recipes"
 #ADVANCEMENT_DIR_RELATIVE = "\\data\\woodcutter\\advancements\\recipes\\misc"
-woods = ['oak', 'spruce', 'birch', 'dark_oak', 'acacia', 'jungle']
+woods = ['oak', 'spruce', 'birch', 'dark_oak', 'acacia', 'jungle', 'warped', 'crimson']
 
 currentDir = os.path.dirname(os.path.abspath(__file__))
 templatesDir = currentDir + TEMPLATES_DIR_RELATIVE
