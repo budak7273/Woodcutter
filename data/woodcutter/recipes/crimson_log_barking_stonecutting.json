@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:crimson_log"
+  },
+  "result": "minecraft:crimson_wood",
+  "count": 1
+}
