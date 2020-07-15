@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "minecraft:warped_log"
+    "item": "minecraft:warped_stem"
   },
   "result": "minecraft:stick",
   "count": 8

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "minecraft:crimson_log"
+    "item": "minecraft:crimson_stem"
   },
   "result": "minecraft:composter",
   "count": 1
