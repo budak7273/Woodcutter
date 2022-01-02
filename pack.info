@@ -1,4 +1,7 @@
 # Everything you should know about this pack:
 
-1. Adds wood recipes for the stonecutter
+1. Adds wood related recipes for the stonecutter
 2. Consumed/produced count is the same as how the stonecutter operates on stone when applicable.
+3. You can regenerate recipes with the included python script
+4. There are alternate recipes you can use if desired in the templates folder
+5. See here for more: https://github.com/budak7273/Woodcutter
