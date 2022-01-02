@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:bow"
+  },
+  "result": "minecraft:stick",
+  "count": 3
+}

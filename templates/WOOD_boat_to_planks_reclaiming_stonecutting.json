@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:WOOD_boat"
+  },
+  "result": "minecraft:WOOD_planks",
+  "count": 5
+}

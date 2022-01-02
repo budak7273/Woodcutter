@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:fishing_rod"
+  },
+  "result": "minecraft:stick",
+  "count": 3
+}
