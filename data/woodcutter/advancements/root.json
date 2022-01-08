@@ -1,0 +1,27 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "hasWoodcutter": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:stonecutter",
+                        "count": {
+                            "min": 1,
+                            "max": 64
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hasWoodcutter"
+        ]
+    ],
+    "rewards": {
+        "function": "woodcutter:advancement_trigger"
+    }
+}
