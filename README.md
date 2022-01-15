@@ -90,8 +90,7 @@ See below for the full list of all supported recipes
     Has the potential to fix bugs you encounter with the datapack.
 * `/function woodcutter:uninstall`
   * Run before uninstalling the pack - cleans up all scoreboard values and such.
-    Does not delete, nor affect the functionality of, existing potions.
-* `/function woodcutter:advancement_trigger`
+* `/function woodcutter:recipe_info`
   * Display the informational message players see when they visit a Stonecutter, has a link to this page.
 * `/scoreboard players set wc_checker_interval wc_options <value>`
   * Set the update interval to a number of ticks. Default is 30. You shouldn't have to change this.
