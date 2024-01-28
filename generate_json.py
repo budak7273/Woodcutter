@@ -6,8 +6,8 @@ SUBFOLDER_FILENAME_KEYWORDS = [
     "shaving", "stripping", "shredding", "rebarking", "reclaiming", "crafting"
 ]
 
-TEMPLATES_DIR_RELATIVE = "\\templates"
-OUTPUT_DIR_RELATIVE = "\\data\\woodcutter\\recipes"
+TEMPLATES_DIR_RELATIVE = "/templates"
+OUTPUT_DIR_RELATIVE = "/data/woodcutter/recipes"
 DEBUG_PRINT_DIRECTORY_CREATION = False
 
 WORD_TO_REPLACE_MATERIAL = "WOOD"
@@ -91,7 +91,7 @@ for templateFileName in templateFiles:
     material_agnostic_template = False
 
     templateFileLines: list[str] = []
-    with open(f'{templateDirectory}\\{templateFileName}', "r") as file:
+    with open(f'{templateDirectory}/{templateFileName}', "r") as file:
         for line in file:
             templateFileLines.append(line)
 
@@ -120,15 +120,15 @@ for templateFileName in templateFiles:
         foundSubfolderInTemplateName = False
         for keyword in SUBFOLDER_FILENAME_KEYWORDS:
             if keyword in templateFileName:
-                subfolderName += f'\\{keyword}'
+                subfolderName += f'/{keyword}'
                 foundSubfolderInTemplateName = True
                 break
         if not foundSubfolderInTemplateName:
-            subfolderName += f'\\{DEFAULT_SUBFOLDER}'
+            subfolderName += f'/{DEFAULT_SUBFOLDER}'
 
-        outFolder = f'{outputDirectory}\\{subfolderName}'
+        outFolder = f'{outputDirectory}/{subfolderName}'
         conditional_make_dir(outFolder)
-        with open(f'{outFolder}\\{outputFileName}', "w+") as newfile:
+        with open(f'{outFolder}/{outputFileName}', "w+") as newfile:
             for line in templateFileLines:
                 resultLine = line
 
