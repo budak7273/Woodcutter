@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:jungle_hanging_sign"
+  },
+  "result": "minecraft:jungle_sign",
+  "count": 1
+}

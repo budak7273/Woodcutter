@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_slab",
+  "ingredients": [
+    {
+      "item": "minecraft:mangrove_slab"
+    },
+    {
+      "item": "minecraft:mangrove_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mangrove_planks",
+    "count": 1
+  }
+}
