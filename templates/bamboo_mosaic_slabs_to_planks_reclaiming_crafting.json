@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_slab",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo_mosaic_slab"
+    },
+    {
+      "item": "minecraft:bamboo_mosaic_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bamboo_mosaic",
+    "count": 1
+  }
+}

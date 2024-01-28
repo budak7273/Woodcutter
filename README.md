@@ -14,12 +14,13 @@ None of these resources allow for creating more wood out of nothing, but sometim
 
 ## Features
 
-- Provides shapeless crafting recipe: 2 slabs of the same variant -> 1 plank of that variant
-- Provides Stonecutter recipes for all wood variants that do the following:
+- Shapeless crafting recipe: 2 slabs of the same variant -> 1 plank of that variant
+- Stonecutter recipes for all wood variants described in detail below (including correctly priced Bamboo)
+- Stonecutter recipes for recycling some items
 
 **Most common recipes**:
 
-See below for the full list of all supported recipes
+See below these screenshots for the full list of all supported recipes.
 
 ![Logs](https://i.imgur.com/M7qohQB.png)
 ![Wood](https://i.imgur.com/YcExopl.png)
@@ -30,7 +31,7 @@ See below for the full list of all supported recipes
 
 ### Woodworking
 
-(crafting that sometimes gives you a better resource cost)
+(sometimes gives you a better resource cost)
 
 - Log -> Composter
 - Planks -> Button
@@ -45,6 +46,7 @@ See below for the full list of all supported recipes
 - Planks -> Ladder
 - Sign -> Hanging Sign
 - Hanging Sign -> Sign
+- Converting Bamboo components to and from the Mosaic variant
 
 ### Stripping/Shaving
 
@@ -60,8 +62,6 @@ See below for the full list of all supported recipes
 
 (bypass crafting steps, same resource output)
 
-Note: _Bamboo has different recipes and/or lacks some of these recipes_
-
 - Log -> 4 planks
 - Log -> 8 sticks
 - Log -> 8 slabs
@@ -73,12 +73,12 @@ Note: _Bamboo has different recipes and/or lacks some of these recipes_
 
 (allow 1 -> 1 cycling back to woods from stripped variants)
 
-- Stripped Log -> Log (to go back to the start of the options)
 - Log -> Wood (normally 4 -> 3 in the crafting grid, this makes it 1 -> 1)
+- Stripped Log -> Log (to go back to the start of the options)
 
 ### Reclaiming
 
-(get resources back from a recipe, never allowing for potential wood type conversions, though)
+(get some resources back by taking something apart)
 
 - Saplings (including azalea and fungus saplings) -> 2 sticks
 - Bow, Fishing Rod, Carrot on a Stick -> 3 sticks
@@ -88,6 +88,13 @@ Note: _Bamboo has different recipes and/or lacks some of these recipes_
 - Crossbow -> 4 sticks
 - Boat -> 5 planks of the respective wood
 - Chest Boat -> 13 planks of the respective wood
+- Mangrove Roots -> 4 sticks
+- Muddy Mangrove Roots -> 4 sticks
+- Muddy Mangrove Roots -> 1 mud
+- Stairs -> 1 stick
+- Ladder -> 1 stick
+- Jukebox -> 1 diamond
+- Bookshelf -> 3 books
 
 ## Commands (operators only)
 
