@@ -1,71 +1,50 @@
-from enum import Enum
 import os
 
 
-
-TEMPLATES_DEFAULT_SUBFOLDER = "woodworking"
-subfolder_filename_keywords = [
-    "shaving", "stripping", "shredding", "rebarking", "reclaiming"
+DEFAULT_SUBFOLDER = "woodworking"
+SUBFOLDER_FILENAME_KEYWORDS = [
+    "shaving", "stripping", "shredding", "rebarking", "reclaiming", "crafting"
 ]
 
 TEMPLATES_DIR_RELATIVE = "\\templates"
 OUTPUT_DIR_RELATIVE = "\\data\\woodcutter\\recipes"
-#ADVANCEMENT_DIR_RELATIVE = "\\data\\woodcutter\\advancements\\recipes\\misc"
+DEBUG_PRINT_DIRECTORY_CREATION = False
 
-
-WORD_TO_REPLACE_PRIMARY = "WOOD"
+WORD_TO_REPLACE_MATERIAL = "WOOD"
 WORD_TO_REPLACE_LOG = "WOOD_log"
 WORD_TO_REPLACE_STRIPPED_WOOD = "WOOD_wood"
 WORD_TO_REPLACE_SAPLING = "WOOD_sapling"
 WORD_TO_REPLACE_BOAT = "WOOD_boat"
 
-class WoodType():
-
-    def __init__(self, name: str, template_overrides: list[tuple[str, str]] = [], skip_templates: list[str] = []):
-        self.name = name
+class WoodVariant():
+    def __init__(self, material: str, template_overrides: list[tuple[str, str]] = [], template_name_skip_patterns: list[str] = []):
+        self.material = material
         self.template_overrides = template_overrides
-        self.skip_templates = skip_templates
+        self.template_name_skip_patterns = template_name_skip_patterns
 
-woods = [
-    'oak',
-    'spruce',
-    'birch',
-    'dark_oak',
-    'acacia',
-    'jungle',
-    ('warped', 'warped_stem', 'warped_hyphae', 'warped_fungus'),
-    ('crimson', 'crimson_stem', 'crimson_hyphae', 'crimson_fungus'),
-    'cherry',
-    ('bamboo', 'bamboo_block', 'bamboo_block', 'bamboo', 'bamboo_raft'),
-    # TODO special control to skip certain recipes
-    # TODO special control to replace custom strings (bamboo chestraft)?
-    ('mangrove', 'mangrove_log', 'mangrove_wood', 'mangrove_propagule'),
-]
-# format for each wood item is ('<plank/generic>', <optional_log_and_stripped_override>, <optional_stripped_wood_override>, <optional_sapling_override>, <optional_boat_override>)
-# if specifying any optional fields, you must specify them all, so that order is maintained
-
-new_woods = [
-    WoodType('oak'),
-    WoodType('spruce'),
-    WoodType('birch'),
-    WoodType('dark_oak'),
-    WoodType('acacia'),
-    WoodType('jungle'),
-    WoodType('warped',
+WOOD_VARIANTS = [
+    WoodVariant('oak'),
+    WoodVariant('spruce'),
+    WoodVariant('birch'),
+    WoodVariant('dark_oak'),
+    WoodVariant('acacia'),
+    WoodVariant('jungle'),
+    WoodVariant('warped',
              template_overrides=[
                  (WORD_TO_REPLACE_LOG, 'warped_stem'),
                  (WORD_TO_REPLACE_STRIPPED_WOOD, 'warped_hyphae'),
                  (WORD_TO_REPLACE_SAPLING, 'warped_fungus')
-             ]),
-    WoodType('crimson',
+             ],
+             template_name_skip_patterns=['boat']),
+    WoodVariant('crimson',
              template_overrides=[
                  (WORD_TO_REPLACE_LOG, 'crimson_stem'),
                  (WORD_TO_REPLACE_STRIPPED_WOOD, 'crimson_hyphae'),
                  (WORD_TO_REPLACE_SAPLING, 'crimson_fungus')
-             ]),
-    WoodType('cherry'),
-    WoodType('bamboo',
-            # TODO need to handle the stripey planks too
+             ],
+             template_name_skip_patterns=['boat']),
+    WoodVariant('cherry'),
+    WoodVariant('bamboo',
              template_overrides=[
                  (WORD_TO_REPLACE_LOG, 'bamboo_block'),
                  (WORD_TO_REPLACE_STRIPPED_WOOD, 'stripped_bamboo_block'),
@@ -73,9 +52,10 @@ new_woods = [
                  ('WOOD_boat', 'bamboo_raft'),
                  ('WOOD_chest_boat', 'bamboo_chest_raft')
              ],
-             skip_templates=['stripped', 'sapling_to_stick_reclaiming', 'log_to_stick_shredding', 'log_to_planks_shredding', 'log_to_slab_shredding'],
+            # Bamboo lacks a Wood (bark) variant and has a different log->plans ratio
+             template_name_skip_patterns=['stripped_wood', 'wood_to', 'to_wood', 'sapling_to_stick_reclaiming', 'log_to_wood', 'log_to_stick', 'log_to_planks', 'log_to_slab'],
     ),
-    WoodType('mangrove',
+    WoodVariant('mangrove',
              template_overrides=[
                  (WORD_TO_REPLACE_SAPLING, 'mangrove_propagule'),
              ]),
@@ -83,32 +63,24 @@ new_woods = [
 
 def conditional_make_dir(path):
     if not os.path.exists(path):
-        print(f"Creating directory {path}")
+        if DEBUG_PRINT_DIRECTORY_CREATION:
+            print(f"Creating directory {path}")
         os.makedirs(path)
 
-currentDir = os.path.dirname(os.path.abspath(__file__))
-templatesDir = f'{currentDir}{TEMPLATES_DIR_RELATIVE}'
-outputDir = f'{currentDir}{OUTPUT_DIR_RELATIVE}'
-#advanceDir = currentDir + ADVANCEMENT_DIR_RELATIVE
+currentDirectory = os.path.dirname(os.path.abspath(__file__))
+templateDirectory = f'{currentDirectory}{TEMPLATES_DIR_RELATIVE}'
+outputDirectory = f'{currentDirectory}{OUTPUT_DIR_RELATIVE}'
 
-print(f"Reading templates from {templatesDir}\nOutputting to {outputDir}")
+print(f"Reading templates from {templateDirectory}\nOutputting to {outputDirectory}")
 
-conditional_make_dir(templatesDir)
-templateFiles = os.listdir(templatesDir)
+conditional_make_dir(templateDirectory)
+templateFiles = os.listdir(templateDirectory)
 if len(templateFiles) == 0:
     raise FileNotFoundError('No template files found in templates directory')
 print("Found the following template candidates: ")
 print(templateFiles)
 
-conditional_make_dir(outputDir)
-
-#if(not(os.path.exists(advanceDir))):
-#    print("Advancement directory did not exist; creating")
-#    os.makedirs(advanceDir)
-
-#eachVariantRecipeNames = []
-#for variant in woods:
-#    eachVariantRecipeNames["" + variant] = []
+conditional_make_dir(outputDirectory)
 
 for templateFileName in templateFiles:
     if not ".json" in templateFileName:
@@ -116,55 +88,62 @@ for templateFileName in templateFiles:
         continue
     print(f'Processing recipe template: {templateFileName}')
 
-    templateFileLines = []
-    with open(f'{templatesDir}\\{templateFileName}', "r") as file:
+    material_agnostic_template = False
+
+    templateFileLines: list[str] = []
+    with open(f'{templateDirectory}\\{templateFileName}', "r") as file:
         for line in file:
             templateFileLines.append(line)
 
-    for variant in woods:
-        has_overrides = type(variant) is tuple
+    for variant in WOOD_VARIANTS:
+        print(f"\t{variant.material} (# overrides: {len(variant.template_overrides)}) (# skip patterns: {len(variant.template_name_skip_patterns)})")
 
-        primary_name = variant[0] if has_overrides else variant
-        log_and_stripped_override_name = variant[1] if has_overrides else None
-        stripped_wood_override_name = variant[2] if has_overrides else None
-        sapling_override_name = variant[3] if has_overrides else None
-        boat_override_name = variant[4] if has_overrides and len(variant) >= 5 else None
+        skip_this_variant = False
+        for pattern in variant.template_name_skip_patterns:
+            if pattern in templateFileName:
+                print(f'\t\t{variant.material} SKIPPED because template name contains matches skip pattern: "{pattern}"')
+                skip_this_variant = True
+                break
+        if skip_this_variant:
+            continue
 
-        print(f"\t{primary_name} (has overrides?: {has_overrides})")
-        newFileName = templateFileName.replace(WORD_TO_REPLACE_PRIMARY, primary_name)
-        # if "boat" in newFileName and has_overrides:
-            # break # override woods don't have boat variants, so don't generate boat related recipes for them
-        
-        # Decide where to organize the output file
-        subfolderName = primary_name
-        for keyword in subfolder_filename_keywords:
+        outputFileName = templateFileName.replace(WORD_TO_REPLACE_MATERIAL, variant.material)
+
+        subfolderName: str
+        if outputFileName is templateFileName:
+            print('\tMaterial-agnostic template detected, only processing this template once')
+            material_agnostic_template = True
+            subfolderName = 'custom'
+        else:
+            subfolderName = variant.material
+
+        foundSubfolderInTemplateName = False
+        for keyword in SUBFOLDER_FILENAME_KEYWORDS:
             if keyword in templateFileName:
                 subfolderName += f'\\{keyword}'
+                foundSubfolderInTemplateName = True
                 break
-        if subfolderName is primary_name:
-            subfolderName += f'\\{TEMPLATES_DEFAULT_SUBFOLDER}'
+        if not foundSubfolderInTemplateName:
+            subfolderName += f'\\{DEFAULT_SUBFOLDER}'
 
-        outputFolder = f'{outputDir}\\{subfolderName}'
-        conditional_make_dir(outputFolder)
-        with open(f'{outputFolder}\\{newFileName}', "w+") as newfile:
+        outFolder = f'{outputDirectory}\\{subfolderName}'
+        conditional_make_dir(outFolder)
+        with open(f'{outFolder}\\{outputFileName}', "w+") as newfile:
             for line in templateFileLines:
                 resultLine = line
-                if has_overrides:
-                    # first, replace the more specific lines, then the general ones
-                    resultLine = resultLine.replace(WORD_TO_REPLACE_LOG, log_and_stripped_override_name)
-                    resultLine = resultLine.replace(WORD_TO_REPLACE_STRIPPED_WOOD, stripped_wood_override_name)
-                    resultLine = resultLine.replace(WORD_TO_REPLACE_SAPLING, sapling_override_name)
-                    if boat_override_name:
-                        resultLine = resultLine.replace(WORD_TO_REPLACE_BOAT, boat_override_name)
-                # regardless of overrides, replace WOOD with the wood variant
-                resultLine = resultLine.replace(WORD_TO_REPLACE_PRIMARY, primary_name)
+
+                if not material_agnostic_template:
+                    for override in variant.template_overrides:
+                        resultLine = resultLine.replace(override[0], override[1])
+
+                    # apply the standard replacement
+                    resultLine = resultLine.replace(WORD_TO_REPLACE_MATERIAL, variant.material)
+
                 #print("Writing: " + resultLine)
                 newfile.write(resultLine)
-            #print("appending " + newFileName + " to " + variant + " recipe list")
-            #eachVariantRecipeNames[variant].append(newFileName)
 
-#for variant in woods:
-#    print("Writing advancement for " + variant")
+        if material_agnostic_template:
+            break
 
 print("Generation complete, copy the contents of this folder to a datapack (ex `<save folder>/datapacks/woodcutter` and use `/datapack enable \"file/woodcutter\"` to enable")
 print("Remember to delete the output directory if you're changed template file names and are re-running the script!")
