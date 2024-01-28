@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:beehive"
+  },
+  "result": "minecraft:honeycomb",
+  "count": 3
+}

@@ -14,13 +14,13 @@ None of these resources allow for creating more wood out of nothing, but sometim
 
 ## Features
 
-- Shapeless crafting recipe: 2 slabs of the same variant -> 1 plank of that variant
+- Shapeless crafting recipe: 2 Slabs of the same variant -> 1 Plank of that variant
 - Stonecutter recipes for all wood variants described in detail below (including correctly priced Bamboo)
-- Stonecutter recipes for recycling some items
+- Stonecutter recipes for recycling some items described in detail below
 
 **Most common recipes**:
 
-See below these screenshots for the full list of all supported recipes.
+Be sure to read below these screenshots for the full list of all supported recipes.
 
 ![Logs](https://i.imgur.com/M7qohQB.png)
 ![Wood](https://i.imgur.com/YcExopl.png)
@@ -37,7 +37,7 @@ See below these screenshots for the full list of all supported recipes.
 - Planks -> Button
 - Planks -> Door
 - Planks -> Fence
-- Planks -> Fence Gate (yes this could be Log, but I figured this made more sense)
+- Planks -> Fence Gate (yes this could be Log, but I figured this made more sense given a fence is one plank too)
 - Planks -> Pressure Plate
 - Planks -> Sign
 - Planks -> Hanging Sign
@@ -62,12 +62,12 @@ See below these screenshots for the full list of all supported recipes.
 
 (bypass crafting steps, same resource output)
 
-- Log -> 4 planks
-- Log -> 8 sticks
-- Log -> 8 slabs
-- Planks -> 2 sticks
-- Planks -> 2 slabs
-- Slab -> 1 stick
+- Log -> 4 Planks
+- Log -> 8 Sticks
+- Log -> 8 Slabs
+- Planks -> 2 Sticks
+- Planks -> 2 Slabs
+- Slab -> 1 Stick
 
 ### Rebarking
 
@@ -80,21 +80,24 @@ See below these screenshots for the full list of all supported recipes.
 
 (get some resources back by taking something apart)
 
-- Saplings (including azalea and fungus saplings) -> 2 sticks
-- Bow, Fishing Rod, Carrot on a Stick -> 3 sticks
-- Warped Fungus on a Stick -> 5 sticks (3 rod + 2 fungus)
-- Painting, Item Frame, Glow Item Frame -> 8 sticks
-- Armor Stand -> 5 sticks
-- Crossbow -> 4 sticks
-- Boat -> 5 planks of the respective wood
-- Chest Boat -> 13 planks of the respective wood
-- Mangrove Roots -> 4 sticks
-- Muddy Mangrove Roots -> 4 sticks
-- Muddy Mangrove Roots -> 1 mud
-- Stairs -> 1 stick
-- Ladder -> 1 stick
-- Jukebox -> 1 diamond
-- Bookshelf -> 3 books
+- Saplings (including azalea and fungus saplings) -> 2 Sticks
+- Bamboo Block -> 9 bamboo
+- Bow, Fishing Rod, Carrot on a Stick -> 3 Sticks
+- Warped Fungus on a Stick -> 5 Sticks (3 rod + 2 fungus)
+- Painting, Item Frame, Glow Item Frame -> 8 Sticks
+- Armor Stand -> 5 Sticks
+- Crossbow -> 4 Sticks
+- Boat -> 5 Planks of the respective wood
+- Chest Boat -> 13 Planks of the respective wood
+- Mangrove Roots -> 4 Sticks
+- Muddy Mangrove Roots -> 4 Sticks
+- Muddy Mangrove Roots -> 1 Mud
+- Stairs -> 1 Stick
+- Ladder -> 1 Stick
+- Jukebox -> 1 Diamond
+- Note Block -> 1 Redstone
+- Bookshelf -> 3 Books
+- Beehive -> 3 Honeycomb
 
 ## Commands (operators only)
 
