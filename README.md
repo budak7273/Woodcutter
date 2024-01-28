@@ -30,7 +30,7 @@ See below for the full list of all supported recipes
 
 ### Woodworking
 
-(crafting that sometimes gives you better resource cost)
+(crafting that sometimes gives you a better resource cost)
 
 - Log -> Composter
 - Planks -> Button
@@ -39,9 +39,12 @@ See below for the full list of all supported recipes
 - Planks -> Fence Gate (yes this could be Log, but I figured this made more sense)
 - Planks -> Pressure Plate
 - Planks -> Sign
+- Planks -> Hanging Sign
 - Planks -> Stairs
 - Planks -> Trapdoor
 - Planks -> Ladder
+- Sign -> Hanging Sign
+- Hanging Sign -> Sign
 
 ### Stripping/Shaving
 
@@ -56,6 +59,8 @@ See below for the full list of all supported recipes
 ### Shredding
 
 (bypass crafting steps, same resource output)
+
+Note: _Bamboo has different recipes and/or lacks some of these recipes_
 
 - Log -> 4 planks
 - Log -> 8 sticks
@@ -82,15 +87,16 @@ See below for the full list of all supported recipes
 - Armor Stand -> 5 sticks
 - Crossbow -> 4 sticks
 - Boat -> 5 planks of the respective wood
+- Chest Boat -> 13 planks of the respective wood
 
 ## Commands (operators only)
 
-* `/function woodcutter:reinstall`
-  * Convenience command. Reinstalls the pack from scratch and reloads all datapacks.
+- `/function woodcutter:reinstall`
+  - Convenience command. Reinstalls the pack from scratch and reloads all datapacks.
     Has the potential to fix bugs you encounter with the datapack.
-* `/function woodcutter:uninstall`
-  * Run before uninstalling the pack - cleans up all scoreboard values and such.
-* `/function woodcutter:recipe_info`
-  * Display the informational message players see when they visit a Stonecutter, has a link to this page.
-* `/scoreboard players set wc_checker_interval wc_options <value>`
-  * Set the update interval to a number of ticks. Default is 30. You shouldn't have to change this.
+- `/function woodcutter:uninstall`
+  - Run before uninstalling the pack - cleans up all scoreboard values and such.
+- `/function woodcutter:recipe_info`
+  - Display the informational message players see when they visit a Stonecutter, has a link to this page.
+- `/scoreboard players set wc_checker_interval wc_options <value>`
+  - Set the update interval to a number of ticks. Default is 30. You shouldn't have to change this.

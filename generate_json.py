@@ -1,10 +1,7 @@
+from enum import Enum
 import os
 
-WORD_TO_REPLACE = "WOOD"
-WORD_TO_REPLACE_LOG = "WOOD_log"
-WORD_TO_REPLACE_STRIPPED_WOOD = "WOOD_wood"
-WORD_TO_REPLACE_SAPLING = "WOOD_sapling"
-WORD_TO_REPLACE_BOAT = "WOOD_boat"
+
 
 TEMPLATES_DEFAULT_SUBFOLDER = "woodworking"
 subfolder_filename_keywords = [
@@ -15,12 +12,19 @@ TEMPLATES_DIR_RELATIVE = "\\templates"
 OUTPUT_DIR_RELATIVE = "\\data\\woodcutter\\recipes"
 #ADVANCEMENT_DIR_RELATIVE = "\\data\\woodcutter\\advancements\\recipes\\misc"
 
-class WoodType:
-    def __init__(self, name, template_overrides=None, skip_templates=None):
+
+WORD_TO_REPLACE_PRIMARY = "WOOD"
+WORD_TO_REPLACE_LOG = "WOOD_log"
+WORD_TO_REPLACE_STRIPPED_WOOD = "WOOD_wood"
+WORD_TO_REPLACE_SAPLING = "WOOD_sapling"
+WORD_TO_REPLACE_BOAT = "WOOD_boat"
+
+class WoodType():
+
+    def __init__(self, name: str, template_overrides: list[tuple[str, str]] = [], skip_templates: list[str] = []):
         self.name = name
         self.template_overrides = template_overrides
         self.skip_templates = skip_templates
-
 
 woods = [
     'oak',
@@ -64,12 +68,12 @@ new_woods = [
             # TODO need to handle the stripey planks too
              template_overrides=[
                  (WORD_TO_REPLACE_LOG, 'bamboo_block'),
-                 (WORD_TO_REPLACE_STRIPPED_WOOD, 'bamboo_block'),
+                 (WORD_TO_REPLACE_STRIPPED_WOOD, 'stripped_bamboo_block'),
                  (WORD_TO_REPLACE_SAPLING, 'bamboo'),
                  ('WOOD_boat', 'bamboo_raft'),
                  ('WOOD_chest_boat', 'bamboo_chest_raft')
              ],
-             skip_templates=['sapling_to_stick_reclaiming']
+             skip_templates=['stripped', 'sapling_to_stick_reclaiming', 'log_to_stick_shredding', 'log_to_planks_shredding', 'log_to_slab_shredding'],
     ),
     WoodType('mangrove',
              template_overrides=[
@@ -89,7 +93,10 @@ outputDir = f'{currentDir}{OUTPUT_DIR_RELATIVE}'
 
 print(f"Reading templates from {templatesDir}\nOutputting to {outputDir}")
 
+conditional_make_dir(templatesDir)
 templateFiles = os.listdir(templatesDir)
+if len(templateFiles) == 0:
+    raise FileNotFoundError('No template files found in templates directory')
 print("Found the following template candidates: ")
 print(templateFiles)
 
@@ -105,14 +112,14 @@ conditional_make_dir(outputDir)
 
 for templateFileName in templateFiles:
     if not ".json" in templateFileName:
-        print(f'Skipping non-json file {templateFileName}')
+        print(f'Skipping non-json file: {templateFileName}')
         continue
-    print(f'Processing recipe template {templateFileName}')
-    newLines = []
-    filePath = f'{templatesDir}\\{templateFileName}'
-    with open(filePath, "r") as f:
-        for line in f:
-            newLines.append(line)
+    print(f'Processing recipe template: {templateFileName}')
+
+    templateFileLines = []
+    with open(f'{templatesDir}\\{templateFileName}', "r") as file:
+        for line in file:
+            templateFileLines.append(line)
 
     for variant in woods:
         has_overrides = type(variant) is tuple
@@ -124,7 +131,7 @@ for templateFileName in templateFiles:
         boat_override_name = variant[4] if has_overrides and len(variant) >= 5 else None
 
         print(f"\t{primary_name} (has overrides?: {has_overrides})")
-        newFileName = templateFileName.replace(WORD_TO_REPLACE, primary_name)
+        newFileName = templateFileName.replace(WORD_TO_REPLACE_PRIMARY, primary_name)
         # if "boat" in newFileName and has_overrides:
             # break # override woods don't have boat variants, so don't generate boat related recipes for them
         
@@ -140,7 +147,7 @@ for templateFileName in templateFiles:
         outputFolder = f'{outputDir}\\{subfolderName}'
         conditional_make_dir(outputFolder)
         with open(f'{outputFolder}\\{newFileName}', "w+") as newfile:
-            for line in newLines:
+            for line in templateFileLines:
                 resultLine = line
                 if has_overrides:
                     # first, replace the more specific lines, then the general ones
@@ -150,7 +157,7 @@ for templateFileName in templateFiles:
                     if boat_override_name:
                         resultLine = resultLine.replace(WORD_TO_REPLACE_BOAT, boat_override_name)
                 # regardless of overrides, replace WOOD with the wood variant
-                resultLine = resultLine.replace(WORD_TO_REPLACE, primary_name)
+                resultLine = resultLine.replace(WORD_TO_REPLACE_PRIMARY, primary_name)
                 #print("Writing: " + resultLine)
                 newfile.write(resultLine)
             #print("appending " + newFileName + " to " + variant + " recipe list")
