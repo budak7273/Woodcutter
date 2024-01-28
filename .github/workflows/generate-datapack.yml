@@ -1,0 +1,33 @@
+name: Generate Datapack
+
+on:
+  push:
+    branches: [ "master", "ci" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Delete any existing recipe output
+      run: rm -r data/woodcutter/recipes/
+    - name: Build recipes
+      run: python generate_json.py
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.0
+      with:
+        name: Woodcutter
+        path: ./  
+        if-no-files-found: error
+          
