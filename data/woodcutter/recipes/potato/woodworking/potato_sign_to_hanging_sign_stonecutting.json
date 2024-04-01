@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:potato_sign"
+  },
+  "result": {
+    "id": "minecraft:potato_hanging_sign",
+    "count": 1
+  }
+}

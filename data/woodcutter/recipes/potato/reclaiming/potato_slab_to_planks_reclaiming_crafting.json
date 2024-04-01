@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_slab",
+  "ingredients": [
+    {
+      "item": "minecraft:potato_slab"
+    },
+    {
+      "item": "minecraft:potato_slab"
+    }
+  ],
+  "result": {
+    "id": "minecraft:potato_planks",
+    "count": 1
+  }
+}
