@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:muddy_mangrove_roots"
   },
-  "result": "minecraft:stick",
-  "count": 4
+  "result": {
+    "id": "minecraft:stick",
+    "count": 4
+  }
 }

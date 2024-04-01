@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:WOOD_hanging_sign"
   },
-  "result": "minecraft:WOOD_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:WOOD_sign",
+    "count": 1
+  }
 }

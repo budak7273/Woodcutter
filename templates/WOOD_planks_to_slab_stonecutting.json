@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:WOOD_planks"
   },
-  "result": "minecraft:WOOD_slab",
-  "count": 2
+  "result": {
+    "id": "minecraft:WOOD_slab",
+    "count": 2
+  }
 }

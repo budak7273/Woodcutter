@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:bookshelf"
   },
-  "result": "minecraft:book",
-  "count": 3
+  "result": {
+    "id": "minecraft:book",
+    "count": 3
+  }
 }

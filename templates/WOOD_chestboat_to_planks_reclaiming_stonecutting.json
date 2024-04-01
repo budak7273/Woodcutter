@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:WOOD_chest_boat"
   },
-  "result": "minecraft:WOOD_planks",
-  "count": 13
+  "result": {
+    "id": "minecraft:WOOD_planks",
+    "count": 13
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:muddy_mangrove_roots"
   },
-  "result": "minecraft:mud",
-  "count": 1
+  "result": {
+    "id": "minecraft:mud",
+    "count": 1
+  }
 }

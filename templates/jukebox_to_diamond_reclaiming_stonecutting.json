@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:jukebox"
   },
-  "result": "minecraft:diamond",
-  "count": 1
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 1
+  }
 }

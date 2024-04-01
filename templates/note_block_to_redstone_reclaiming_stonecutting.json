@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:note_block"
   },
-  "result": "minecraft:redstone",
-  "count": 1
+  "result": {
+    "id": "minecraft:redstone",
+    "count": 1
+  }
 }

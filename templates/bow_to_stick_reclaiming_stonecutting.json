@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:bow"
   },
-  "result": "minecraft:stick",
-  "count": 3
+  "result": {
+    "id": "minecraft:stick",
+    "count": 3
+  }
 }

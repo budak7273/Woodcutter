@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:WOOD_wood"
   },
-  "result": "minecraft:WOOD_log",
-  "count": 1
+  "result": {
+    "id": "minecraft:WOOD_log",
+    "count": 1
+  }
 }

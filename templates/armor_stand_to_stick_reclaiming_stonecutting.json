@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:armor_stand"
   },
-  "result": "minecraft:stick",
-  "count": 5
+  "result": {
+    "id": "minecraft:stick",
+    "count": 5
+  }
 }

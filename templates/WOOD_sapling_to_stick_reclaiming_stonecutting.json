@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:WOOD_sapling"
   },
-  "result": "minecraft:stick",
-  "count": 2
+  "result": {
+    "id": "minecraft:stick",
+    "count": 2
+  }
 }

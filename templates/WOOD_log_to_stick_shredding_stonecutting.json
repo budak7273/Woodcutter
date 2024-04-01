@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:WOOD_log"
   },
-  "result": "minecraft:stick",
-  "count": 8
+  "result": {
+    "id": "minecraft:stick",
+    "count": 8
+  }
 }

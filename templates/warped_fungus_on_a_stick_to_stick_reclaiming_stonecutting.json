@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:warped_fungus_on_a_stick"
   },
-  "result": "minecraft:stick",
-  "count": 5
+  "result": {
+    "id": "minecraft:stick",
+    "count": 5
+  }
 }
