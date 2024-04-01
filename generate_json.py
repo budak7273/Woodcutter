@@ -64,7 +64,7 @@ WOOD_VARIANTS = [
                  (WORD_TO_REPLACE_LOG, 'potato_stem'),
                  (WORD_TO_REPLACE_SAPLING, 'potato_sprouts')
              ],
-             template_name_skip_patterns=['boat', 'stripped']),
+             template_name_skip_patterns=['boat', 'stripped', 'shaving', 'rebarking']),
 ]
 
 def conditional_make_dir(path):
