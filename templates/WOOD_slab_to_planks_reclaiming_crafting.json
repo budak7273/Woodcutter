@@ -10,7 +10,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:WOOD_planks",
+    "id": "minecraft:WOOD_planks",
     "count": 1
   }
 }
