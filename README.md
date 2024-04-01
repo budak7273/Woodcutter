@@ -4,7 +4,7 @@ Datapack for Minecraft that allows crafting of wood products at the Stonecutter 
 
 All recipes are generated from template files via `generate_json.py`, so you're free to edit them and regenerate as you see fit.
 
-The Stonecutter does not support recipes consuming more than of the input item ([marked as not a bug](https://bugs.mojang.com/browse/MC-151141)), so some recipes such as doors are cheaper than they should be. 
+The Stonecutter does not support recipes consuming more than of the input item ([marked as not a bug](https://bugs.mojang.com/browse/MC-151141)), so some recipes such as doors are cheaper than they should be.
 
 ![Example photo with oak planks](https://i.imgur.com/FkdLxLH.png)
 
@@ -15,6 +15,7 @@ None of these resources allow for creating more wood out of nothing, but sometim
 ## Features
 
 - Shapeless crafting recipe: 2 Slabs of the same variant -> 1 Plank of that variant
+  - It works in any item placement, but if the slab already has a "stacked vertically" shaped crafting recipe (ex. Bamboo slabs), that takes precedence, so don't stack them vertically in the case.
 - Stonecutter recipes for all wood variants described in detail below (including correctly priced Bamboo)
 - Stonecutter recipes for recycling some items described in detail below
 
