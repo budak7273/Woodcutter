@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:fishing_rod"
   },
-  "result": "minecraft:stick",
-  "count": 3
+  "result": {
+    "id": "minecraft:stick",
+    "count": 3
+  }
 }

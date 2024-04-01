@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cherry_chest_boat"
   },
-  "result": "minecraft:cherry_planks",
-  "count": 13
+  "result": {
+    "id": "minecraft:cherry_planks",
+    "count": 13
+  }
 }

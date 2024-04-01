@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:bamboo_chest_raft"
   },
-  "result": "minecraft:bamboo_planks",
-  "count": 13
+  "result": {
+    "id": "minecraft:bamboo_planks",
+    "count": 13
+  }
 }

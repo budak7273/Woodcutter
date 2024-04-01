@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:bamboo_planks"
   },
-  "result": "minecraft:bamboo_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:bamboo_sign",
+    "count": 1
+  }
 }

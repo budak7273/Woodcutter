@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:bamboo_sign"
   },
-  "result": "minecraft:bamboo_hanging_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:bamboo_hanging_sign",
+    "count": 1
+  }
 }

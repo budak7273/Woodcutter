@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:mangrove_stairs"
   },
-  "result": "minecraft:stick",
-  "count": 1
+  "result": {
+    "id": "minecraft:stick",
+    "count": 1
+  }
 }

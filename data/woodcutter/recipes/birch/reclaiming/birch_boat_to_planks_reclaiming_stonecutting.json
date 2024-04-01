@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:birch_boat"
   },
-  "result": "minecraft:birch_planks",
-  "count": 5
+  "result": {
+    "id": "minecraft:birch_planks",
+    "count": 5
+  }
 }

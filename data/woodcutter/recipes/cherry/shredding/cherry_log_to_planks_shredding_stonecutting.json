@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cherry_log"
   },
-  "result": "minecraft:cherry_planks",
-  "count": 4
+  "result": {
+    "id": "minecraft:cherry_planks",
+    "count": 4
+  }
 }

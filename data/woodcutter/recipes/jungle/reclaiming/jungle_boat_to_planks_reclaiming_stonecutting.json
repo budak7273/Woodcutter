@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:jungle_boat"
   },
-  "result": "minecraft:jungle_planks",
-  "count": 5
+  "result": {
+    "id": "minecraft:jungle_planks",
+    "count": 5
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:crimson_stem"
   },
-  "result": "minecraft:crimson_slab",
-  "count": 8
+  "result": {
+    "id": "minecraft:crimson_slab",
+    "count": 8
+  }
 }

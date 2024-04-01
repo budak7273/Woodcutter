@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:acacia_hanging_sign"
   },
-  "result": "minecraft:acacia_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:acacia_sign",
+    "count": 1
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:spruce_chest_boat"
   },
-  "result": "minecraft:spruce_planks",
-  "count": 13
+  "result": {
+    "id": "minecraft:spruce_planks",
+    "count": 13
+  }
 }

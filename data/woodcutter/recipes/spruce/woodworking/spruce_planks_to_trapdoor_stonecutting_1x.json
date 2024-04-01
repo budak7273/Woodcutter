@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:spruce_planks"
   },
-  "result": "minecraft:spruce_trapdoor",
-  "count": 1
+  "result": {
+    "id": "minecraft:spruce_trapdoor",
+    "count": 1
+  }
 }

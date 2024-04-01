@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:jungle_sign"
   },
-  "result": "minecraft:jungle_hanging_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:jungle_hanging_sign",
+    "count": 1
+  }
 }

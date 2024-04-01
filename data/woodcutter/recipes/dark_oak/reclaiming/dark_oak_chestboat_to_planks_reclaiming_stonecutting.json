@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:dark_oak_chest_boat"
   },
-  "result": "minecraft:dark_oak_planks",
-  "count": 13
+  "result": {
+    "id": "minecraft:dark_oak_planks",
+    "count": 13
+  }
 }

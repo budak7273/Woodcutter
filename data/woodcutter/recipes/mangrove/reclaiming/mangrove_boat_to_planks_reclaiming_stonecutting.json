@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:mangrove_boat"
   },
-  "result": "minecraft:mangrove_planks",
-  "count": 5
+  "result": {
+    "id": "minecraft:mangrove_planks",
+    "count": 5
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cherry_sign"
   },
-  "result": "minecraft:cherry_hanging_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:cherry_hanging_sign",
+    "count": 1
+  }
 }

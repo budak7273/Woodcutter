@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:acacia_planks"
   },
-  "result": "minecraft:acacia_fence",
-  "count": 1
+  "result": {
+    "id": "minecraft:acacia_fence",
+    "count": 1
+  }
 }

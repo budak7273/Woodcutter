@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:birch_hanging_sign"
   },
-  "result": "minecraft:birch_sign",
-  "count": 1
+  "result": {
+    "id": "minecraft:birch_sign",
+    "count": 1
+  }
 }
