@@ -6,10 +6,9 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:stonecutter",
+                        "items": ["minecraft:stonecutter"],
                         "count": {
-                            "min": 1,
-                            "max": 64
+                            "min": 1
                         }
                     }
                 ]
