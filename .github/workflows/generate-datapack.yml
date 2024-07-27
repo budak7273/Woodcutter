@@ -30,4 +30,3 @@ jobs:
         name: Woodcutter
         path: ./  
         if-no-files-found: error
-          
