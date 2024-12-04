@@ -59,6 +59,7 @@ WOOD_VARIANTS = [
              template_overrides=[
                  (WORD_TO_REPLACE_SAPLING, 'mangrove_propagule'),
              ]),
+    WoodVariant('pale_oak'),
 ]
 
 def conditional_make_dir(path):
