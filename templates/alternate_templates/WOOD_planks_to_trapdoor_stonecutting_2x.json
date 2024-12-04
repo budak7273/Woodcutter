@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:WOOD_planks"
-  },
+  "ingredient": [
+    "minecraft:WOOD_planks"
+  ],
   "result": "minecraft:WOOD_trapdoor",
   "count": 2
 }

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:WOOD_sapling"
-  },
+  "ingredient": [
+    "minecraft:WOOD_sapling"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 2

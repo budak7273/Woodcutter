@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:WOOD_log"
-  },
+  "ingredient": [
+    "minecraft:WOOD_log"
+  ],
   "result": {
     "id": "minecraft:stripped_WOOD_log",
     "count": 1

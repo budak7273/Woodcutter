@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:flowering_azalea"
-  },
+  "ingredient": [
+    "minecraft:flowering_azalea"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 2

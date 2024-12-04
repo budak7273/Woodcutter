@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:beehive"
-  },
+  "ingredient": [
+    "minecraft:beehive"
+  ],
   "result": {
     "id": "minecraft:honeycomb",
     "count": 3

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:warped_fungus_on_a_stick"
-  },
+  "ingredient": [
+    "minecraft:warped_fungus_on_a_stick"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 5

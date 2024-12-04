@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:bookshelf"
-  },
+  "ingredient": [
+    "minecraft:bookshelf"
+  ],
   "result": {
     "id": "minecraft:book",
     "count": 3

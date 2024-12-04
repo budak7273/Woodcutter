@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:muddy_mangrove_roots"
-  },
+  "ingredient": [
+    "minecraft:muddy_mangrove_roots"
+  ],
   "result": {
     "id": "minecraft:mud",
     "count": 1

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:bamboo_block"
-  },
+  "ingredient": [
+    "minecraft:bamboo_block"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 4
