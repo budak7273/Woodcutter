@@ -111,3 +111,11 @@ Be sure to read below these screenshots for the full list of all supported recip
   - Display the informational message players see when they visit a Stonecutter, has a link to this page.
 - `/scoreboard players set wc_checker_interval wc_options <value>`
   - Set the update interval to a number of ticks. Default is 30. You shouldn't have to change this.
+
+## Developer Information
+
+Python is required to run `generate_json.py`. The CI uses Python 3.10,
+but no packages/libraries are used, so it could probably run on other versions without issue.
+
+Wood variants are defined in `WOOD_VARIANTS` in `generate_json.py`
+and allow specifying custom overrides - see existing variants for examples.
