@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "group": "wooden_slab",
   "ingredients": [
-    {
-      "item": "minecraft:bamboo_slab"
-    },
-    {
-      "item": "minecraft:bamboo_slab"
-    }
+    "minecraft:bamboo_slab",
+    "minecraft:bamboo_slab"
   ],
   "result": {
     "id": "minecraft:bamboo_planks",

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:oak_sign"
-  },
+  "ingredient": [
+    "minecraft:oak_sign"
+  ],
   "result": {
     "id": "minecraft:oak_hanging_sign",
     "count": 1

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:oak_log"
-  },
+  "ingredient": [
+    "minecraft:oak_log"
+  ],
   "result": {
     "id": "minecraft:composter",
     "count": 1

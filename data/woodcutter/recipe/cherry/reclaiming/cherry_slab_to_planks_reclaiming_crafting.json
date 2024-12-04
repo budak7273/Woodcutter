@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "group": "wooden_slab",
   "ingredients": [
-    {
-      "item": "minecraft:cherry_slab"
-    },
-    {
-      "item": "minecraft:cherry_slab"
-    }
+    "minecraft:cherry_slab",
+    "minecraft:cherry_slab"
   ],
   "result": {
     "id": "minecraft:cherry_planks",

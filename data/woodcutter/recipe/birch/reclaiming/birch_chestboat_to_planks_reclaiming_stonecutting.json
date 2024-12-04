@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:birch_chest_boat"
-  },
+  "ingredient": [
+    "minecraft:birch_chest_boat"
+  ],
   "result": {
     "id": "minecraft:birch_planks",
     "count": 13

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:mangrove_sign"
-  },
+  "ingredient": [
+    "minecraft:mangrove_sign"
+  ],
   "result": {
     "id": "minecraft:mangrove_hanging_sign",
     "count": 1

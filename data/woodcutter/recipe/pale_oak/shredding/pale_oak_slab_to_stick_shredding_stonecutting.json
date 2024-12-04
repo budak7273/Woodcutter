@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:pale_oak_slab"
+  ],
+  "result": {
+    "id": "minecraft:stick",
+    "count": 1
+  }
+}

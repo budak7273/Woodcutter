@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:oak_wood"
-  },
+  "ingredient": [
+    "minecraft:oak_wood"
+  ],
   "result": {
     "id": "minecraft:stripped_oak_wood",
     "count": 1

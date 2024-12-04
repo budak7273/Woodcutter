@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:spruce_log"
-  },
+  "ingredient": [
+    "minecraft:spruce_log"
+  ],
   "result": {
     "id": "minecraft:composter",
     "count": 1

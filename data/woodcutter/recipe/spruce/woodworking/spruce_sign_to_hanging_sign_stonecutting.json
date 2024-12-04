@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:spruce_sign"
-  },
+  "ingredient": [
+    "minecraft:spruce_sign"
+  ],
   "result": {
     "id": "minecraft:spruce_hanging_sign",
     "count": 1

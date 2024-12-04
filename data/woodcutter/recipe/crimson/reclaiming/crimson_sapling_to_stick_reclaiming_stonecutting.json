@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:crimson_fungus"
-  },
+  "ingredient": [
+    "minecraft:crimson_fungus"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 2

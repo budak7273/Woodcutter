@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_slab",
+  "ingredients": [
+    "minecraft:pale_oak_slab",
+    "minecraft:pale_oak_slab"
+  ],
+  "result": {
+    "id": "minecraft:pale_oak_planks",
+    "count": 1
+  }
+}

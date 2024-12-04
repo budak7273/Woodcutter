@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:birch_sign"
-  },
+  "ingredient": [
+    "minecraft:birch_sign"
+  ],
   "result": {
     "id": "minecraft:birch_hanging_sign",
     "count": 1

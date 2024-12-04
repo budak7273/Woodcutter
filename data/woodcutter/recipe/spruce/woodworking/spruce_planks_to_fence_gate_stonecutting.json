@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:spruce_planks"
-  },
+  "ingredient": [
+    "minecraft:spruce_planks"
+  ],
   "result": {
     "id": "minecraft:spruce_fence_gate",
     "count": 1

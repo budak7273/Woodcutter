@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:crimson_hanging_sign"
-  },
+  "ingredient": [
+    "minecraft:crimson_hanging_sign"
+  ],
   "result": {
     "id": "minecraft:crimson_sign",
     "count": 1

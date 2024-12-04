@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:cherry_hanging_sign"
-  },
+  "ingredient": [
+    "minecraft:cherry_hanging_sign"
+  ],
   "result": {
     "id": "minecraft:cherry_sign",
     "count": 1

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:stripped_warped_stem"
-  },
+  "ingredient": [
+    "minecraft:stripped_warped_stem"
+  ],
   "result": {
     "id": "minecraft:warped_stem",
     "count": 1

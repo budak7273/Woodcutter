@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "group": "wooden_slab",
   "ingredients": [
-    {
-      "item": "minecraft:warped_slab"
-    },
-    {
-      "item": "minecraft:warped_slab"
-    }
+    "minecraft:warped_slab",
+    "minecraft:warped_slab"
   ],
   "result": {
     "id": "minecraft:warped_planks",

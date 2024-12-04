@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:spruce_slab"
-  },
+  "ingredient": [
+    "minecraft:spruce_slab"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 1

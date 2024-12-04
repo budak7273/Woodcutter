@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:warped_slab"
-  },
+  "ingredient": [
+    "minecraft:warped_slab"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 1

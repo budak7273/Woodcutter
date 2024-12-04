@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:armor_stand"
-  },
+  "ingredient": [
+    "minecraft:armor_stand"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 5

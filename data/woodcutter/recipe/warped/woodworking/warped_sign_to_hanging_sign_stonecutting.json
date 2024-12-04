@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:warped_sign"
-  },
+  "ingredient": [
+    "minecraft:warped_sign"
+  ],
   "result": {
     "id": "minecraft:warped_hanging_sign",
     "count": 1

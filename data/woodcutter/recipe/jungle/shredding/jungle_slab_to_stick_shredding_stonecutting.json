@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:jungle_slab"
-  },
+  "ingredient": [
+    "minecraft:jungle_slab"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 1

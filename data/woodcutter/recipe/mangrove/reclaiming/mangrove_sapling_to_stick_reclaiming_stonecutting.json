@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:mangrove_propagule"
-  },
+  "ingredient": [
+    "minecraft:mangrove_propagule"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 2

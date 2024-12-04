@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:oak_planks"
-  },
+  "ingredient": [
+    "minecraft:oak_planks"
+  ],
   "result": {
     "id": "minecraft:ladder",
     "count": 1

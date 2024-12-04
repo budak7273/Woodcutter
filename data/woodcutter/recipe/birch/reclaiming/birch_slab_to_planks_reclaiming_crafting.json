@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "group": "wooden_slab",
   "ingredients": [
-    {
-      "item": "minecraft:birch_slab"
-    },
-    {
-      "item": "minecraft:birch_slab"
-    }
+    "minecraft:birch_slab",
+    "minecraft:birch_slab"
   ],
   "result": {
     "id": "minecraft:birch_planks",

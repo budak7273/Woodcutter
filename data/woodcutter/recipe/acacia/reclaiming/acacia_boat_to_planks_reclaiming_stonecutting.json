@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:acacia_boat"
-  },
+  "ingredient": [
+    "minecraft:acacia_boat"
+  ],
   "result": {
     "id": "minecraft:acacia_planks",
     "count": 5

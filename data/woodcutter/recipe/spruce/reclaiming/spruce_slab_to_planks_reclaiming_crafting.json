@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "group": "wooden_slab",
   "ingredients": [
-    {
-      "item": "minecraft:spruce_slab"
-    },
-    {
-      "item": "minecraft:spruce_slab"
-    }
+    "minecraft:spruce_slab",
+    "minecraft:spruce_slab"
   ],
   "result": {
     "id": "minecraft:spruce_planks",

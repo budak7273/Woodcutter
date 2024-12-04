@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:crossbow"
-  },
+  "ingredient": [
+    "minecraft:crossbow"
+  ],
   "result": {
     "id": "minecraft:stick",
     "count": 4
